@@ -1,0 +1,19 @@
+<odoo>
+    <data>
+
+        <!-- Action for the property model -->
+        <record id="estate_property_model_action" model="ir.actions.act_window">
+            <field name="name">Properties</field>
+            <field name="res_model">estate.property</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <!-- Menu for the estate module -->
+        <menuitem id="menu_estate_root" name="Estate" sequence="10">
+            <menuitem id="menu_estate_properties" name="Properties" sequence="10">
+                <menuitem id="menu_estate_properties" name="Properties" action="estate_property_model_action"/>
+            </menuitem>
+        </menuitem>
+
+    </data>
+</odoo>
