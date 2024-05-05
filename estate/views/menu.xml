@@ -1,19 +1,34 @@
 <odoo>
     <data>
 
-        <!-- Action for the property model -->
-        <record id="estate_property_model_action" model="ir.actions.act_window">
-            <field name="name">Properties</field>
+        <!-- Actions-->
+        <record id="property_model_action" model="ir.actions.act_window">
+            <field name="name">Estate Property</field>
             <field name="res_model">estate.property</field>
             <field name="view_mode">tree,form</field>
         </record>
 
-        <!-- Menu for the estate module -->
-        <menuitem id="menu_estate_root" name="Estate" sequence="10">
-            <menuitem id="menu_estate_properties" name="Properties" sequence="10">
-                <menuitem id="menu_estate_properties" name="Properties" action="estate_property_model_action"/>
+        <record id="property_type_action" model="ir.actions.act_window">
+            <field name="name">Property Types</field>
+            <field name="res_model">estate.property.type</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <record id="property_tag_action" model="ir.actions.act_window">
+            <field name="name">Property Tag</field>
+            <field name="res_model">estate.property.tag</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <!-- Menu -->
+        <menuitem id="estate_menu_root" name="Estate">
+            <menuitem id="property_model_menu_action" name="Properties" action="property_model_action"/>
+            <menuitem id="settings_menu" name="Settings">
+                <menuitem id="property_type_menu_action" name="Property Types" action="property_type_action"/>
+                <menuitem id="property_tag_menu_action" name="Property Tags" action="property_tag_action"/>
             </menuitem>
         </menuitem>
 
     </data>
 </odoo>
+

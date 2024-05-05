@@ -1,13 +1,12 @@
-# -*- coding: utf-8 -*-
 {
     'name': "estate",
 
     'summary': """
-        
+
     """,
 
     'description': """
-         
+
     """,
 
     'author': "Odoo",
@@ -22,7 +21,13 @@
     'installable': True,
     'data': [
         'views/property.xml',
+        'views/property_offer.xml',
+        'views/property_type.xml',
+        'views/property_tag.xml',
+        'security/ir.model.access.csv',
         'views/menu.xml',
+        'reports/property.xml',
     ],
     'license': 'AGPL-3'
 }
+# -*- coding: utf-8 -*-
