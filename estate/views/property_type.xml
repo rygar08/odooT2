@@ -31,15 +31,13 @@
                                 <field name="name" placeholder="Title"/>
                             </h1>
                         </div>
-                        <group>
-                            <field name="property_ids">
-                                <tree>
-                                    <field name="name"/>
-                                    <field name="expected_price"/>
-                                    <field name="state"/>
-                                </tree>
-                            </field>
-                        </group>
+                        <field name="property_ids">
+                            <tree>
+                                <field name="name"/>
+                                <field name="expected_price"/>
+                                <field name="state"/>
+                            </tree>
+                        </field>
                     </sheet>
                 </form>
             </field>

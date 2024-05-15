@@ -52,7 +52,7 @@ class EstateProperty(models.Model):
     seller_id = fields.Many2one("res.partner", string="Seller", default=lambda self: self.env.user)
     tag_ids = fields.Many2many("estate.property.tag", string="Tags")
     offer_ids = fields.One2many("estate.property.offer", "property_id", string="Offers")
-    best_price = fields.Float(compute="_compute_best_price", store=True, string="Best offer price")
+    best_price = fields.Float(compute="_compute_best_price", store=True, string="Best offer")
 
     @api.depends("living_area", "garden_area")
     def _compute_total_area(self):
@@ -209,7 +209,7 @@ class PropertyOffer(models.Model):
                 max_offer = max(prop.mapped("offer_ids.price"))
                 if float_compare(vals["price"], max_offer, precision_rounding=0.01) <= 0:
                     raise UserError("The offer must be higher than %.2f" % max_offer)
-            prop.state = "offer_received"
+                prop.state = "offer_received"
         return super().create(vals)
 
 
