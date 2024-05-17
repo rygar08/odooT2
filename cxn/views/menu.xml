@@ -1,0 +1,18 @@
+<odoo>
+    <data>
+
+        <!-- Actions-->
+        <record id="schedule_action" model="ir.actions.act_window">
+            <field name="name">schedule_action</field>
+            <field name="res_model">schedules.schedule</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <!-- Menu -->
+        <menuitem id="schedules_menu_root" name="Schedules">
+            <menuitem id="schedule_model_menu_action" name="Schedules" action="schedule_action"/>
+        </menuitem>
+
+    </data>
+</odoo>
+
