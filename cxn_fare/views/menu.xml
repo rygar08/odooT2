@@ -1,0 +1,22 @@
+<odoo>
+    <data>
+
+        <!-- Actions-->
+        <record id="fare_action" model="ir.actions.act_window">
+            <field name="name">Fare Type</field>
+            <field name="res_model">cxn.fare</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <!-- Menu -->
+        <menuitem id="fare_menu_root" name="Fares">
+            <menuitem id="fare_model_menu_action" name="Fare Types" action="fare_action"/>
+<!--            <menuitem id="settings_menu" name="Settings">-->
+<!--                <menuitem id="property_type_menu_action" name="Property Types" action="fare_action"/>-->
+<!--                <menuitem id="property_tag_menu_action" name="Property Tags" action="property_tag_action"/>-->
+<!--            </menuitem>-->
+        </menuitem>
+
+    </data>
+</odoo>
+
